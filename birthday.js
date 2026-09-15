@@ -16,7 +16,6 @@ reasons: [
   "Because you're my favourite person to annoy.",
   "The way you make me feel safe.",
   "Because you put up with me. Somehow. 😂",
-  ...
   ],
  letterLines: [
   "Hey you,",
