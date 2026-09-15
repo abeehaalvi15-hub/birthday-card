@@ -18,17 +18,20 @@ reasons: [
   "Because you put up with me. Somehow. 😂",
   ],
  letterLines: [
-  "Hey you,",
-  "",
-  "Happy birthday to my favourite person.",
-  "",
-  "I don't think I say it enough, but I'm really grateful for you.",
-  "",
-  "Thank you for being there through all the good days, bad days, stupid arguments and everything in between.",
-  "",
-  "I hope this year brings you everything you've been wishing for.",
-  "",
-  "Happy birthday ❤️"
+    "Hey Tushi,",
+    "",
+    "Happy birthday my lovely Fiancé (a literal unc). 😂",
+    "",
+    "I don't think I say it enough, but I'm really grateful for you, even tho you annoy me.",
+    "",
+    "For all the laughs, the random conversations, the stupid arguments, the little moments, and everything in between — thank you for being you.",
+    "",
+    "I hope 23 brings you closer to everything you've been working for, dreaming about, and quietly wishing for.",
+    "",
+    "And I hope you know that no matter how much I annoy you, I’ll always be rooting for you.",
+    "",
+    "Happy birthday, Tushi. ❤️"
+],
 
   ],
   balloonWishes: [
