@@ -747,44 +747,28 @@ function initQuestions() {
   const options = $('#questionOptions');
   const result = $('#questionResult');
 
+  if (!questionText || !questionNumber || !options || !result) return;
+
   const questions = [
     {
       text: 'Do you want a present? 🎁',
       answers: [
-        {
-          text: 'YES 🎁',
-          response: 'Good choice. 😌<br>Your present is…<br><strong>ME. ❤️</strong><br><small>No refunds. No exchanges. You’re stuck with me.</small>'
-        },
-        {
-          text: 'NO 🙄',
-          response: 'Too bad. 😂<br>You already got one.<br><strong>It’s me. ❤️</strong>'
-        }
+        ['YES 🎁', 'Good choice. 😌<br>Your present is…<br><strong>ME. ❤️</strong><br><small>No refunds. No exchanges. You’re stuck with me.</small>'],
+        ['NO 🙄', 'Too bad. 😂<br>You already got one.<br><strong>It’s me. ❤️</strong>']
       ]
     },
     {
       text: 'Do you love me? ❤️',
       answers: [
-        {
-          text: 'YES 🥰',
-          response: 'Correct answer.<br>You may continue. 😌❤️'
-        },
-        {
-          text: 'OBVIOUSLY 🙄',
-          response: '<strong>GOOD.</strong><br>I was about to make you try again. 💀'
-        }
+        ['YES 🥰', 'Correct answer.<br>You may continue. 😌❤️'],
+        ['OBVIOUSLY 🙄', '<strong>GOOD.</strong><br>I was about to make you try again. 💀']
       ]
     },
     {
       text: 'Are you ready for 23? 🎂',
       answers: [
-        {
-          text: 'YES 😎',
-          response: 'That’s the spirit.<br><strong>23 looks good on you already. 🎂</strong>'
-        },
-        {
-          text: 'I’M SCARED 😭',
-          response: 'Don’t worry.<br><strong>I’ll annoy you through it. ❤️😂</strong>'
-        }
+        ['YES 😎', 'That’s the spirit.<br><strong>23 looks good on you already. 🎂</strong>'],
+        ['I’M SCARED 😭', 'Don’t worry.<br><strong>I’ll annoy you through it. ❤️😂</strong>']
       ]
     }
   ];
@@ -797,38 +781,38 @@ function initQuestions() {
     questionNumber.textContent = `Question ${currentQuestion + 1} of ${questions.length}`;
     questionText.textContent = question.text;
     result.innerHTML = '';
-
     options.innerHTML = '';
 
-    question.answers.forEach((answer) => {
+    question.answers.forEach(([text, response]) => {
       const button = document.createElement('button');
+      button.type = 'button';
       button.className = 'question-btn';
-      button.textContent = answer.text;
+      button.textContent = text;
 
-      button.addEventListener('click', () => {
-        result.innerHTML = answer.response;
+      button.onclick = function () {
+        result.innerHTML = response;
+
+        options.innerHTML = '';
 
         if (currentQuestion < questions.length - 1) {
           const nextButton = document.createElement('button');
+          nextButton.type = 'button';
           nextButton.className = 'question-next';
           nextButton.textContent = 'Next question →';
 
-          nextButton.addEventListener('click', () => {
+          nextButton.onclick = function () {
             currentQuestion++;
             showQuestion();
-          });
+          };
 
-          options.innerHTML = '';
           options.appendChild(nextButton);
         } else {
-          options.innerHTML = '';
-
           const doneMessage = document.createElement('p');
           doneMessage.className = 'question-done';
           doneMessage.textContent = 'Okay, you passed. I guess I’ll keep you. ❤️';
           options.appendChild(doneMessage);
         }
-      });
+      };
 
       options.appendChild(button);
     });
