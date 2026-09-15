@@ -412,7 +412,24 @@ canvas#bgCanvas { position:fixed; inset:0; width:100%; height:100%; z-index:0; p
     <div class="balloons-grid" id="balloonsGrid"></div>
     <p class="balloons-counter fade-in-up"><span id="balloonsCount">0</span> / 8</p>
   </section>
+  
+<section id="questionsSection" class="section">
+  <p class="section-sub fade-in-up">✦ OKAY, ONE LAST THING ✦</p>
+  <h2 class="section-title fade-in-up">A Few Very Important Questions 👀</h2>
 
+  <div class="question-card fade-in-up" id="questionCard">
+    <p class="question-number" id="questionNumber">Question 1 of 3</p>
+    <h3 class="question-text" id="questionText">Do you want a present? 🎁</h3>
+
+    <div class="question-options" id="questionOptions">
+      <button class="question-btn" data-answer="yes">YES 🎁</button>
+      <button class="question-btn" data-answer="no">NO 🙄</button>
+    </div>
+
+    <div class="question-result" id="questionResult"></div>
+  </div>
+</section>
+  
   <section id="finaleSection" class="section">
     <canvas id="fireworksCanvas"></canvas>
     <div class="finale-content">
