@@ -519,49 +519,28 @@ function initSakura() {
 // ============ AUDIO (Web Audio Birthday Melody) ============
 function initAudio() {
   const btn = $('#musicBtn');
-  const MELODY = [
-    [262,0.38],[262,0.12],[294,0.5],[262,0.5],[349,0.5],[330,0.95],
-    [0,0.2],
-    [262,0.38],[262,0.12],[294,0.5],[262,0.5],[392,0.5],[349,0.95],
-    [0,0.2],
-    [262,0.38],[262,0.12],[523,0.5],[440,0.5],[349,0.5],[330,0.5],[294,0.5],
-    [0,0.2],
-    [466,0.38],[466,0.12],[440,0.5],[349,0.5],[392,0.5],[349,0.95]
-  ];
-  const melodyDuration = MELODY.reduce((s, [, d]) => s + d, 0); // FIX: pre-compute
+  const audio = new Audio('Y2Mate.is - Laufey - From The Start Lyrics.mp3');
 
-  function playMelody() {
-    if (!state.audioCtx) state.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    const ac = state.audioCtx;
-    if (ac.state === 'suspended') ac.resume();
-    let t = ac.currentTime + 0.05;
+  audio.loop = true;
+  audio.volume = 0.5;
 
-    for (const [freq, dur] of MELODY) {
-      if (freq === 0) { t += dur; continue; }
-      const osc = ac.createOscillator();
-      const gain = ac.createGain();
-      osc.type = 'triangle';
-      osc.frequency.value = freq;
-      gain.gain.setValueAtTime(0, t);
-      gain.gain.linearRampToValueAtTime(0.07, t + 0.04);
-      gain.gain.exponentialRampToValueAtTime(0.001, t + dur - 0.03);
-      osc.connect(gain);
-      gain.connect(ac.destination);
-      osc.start(t);
-      osc.stop(t + dur);
-      t += dur;
-    }
-    state.melodyTimeout = setTimeout(() => {
-      if (state.musicPlaying) playMelody();
-    }, (melodyDuration + 1.2) * 1000);
-  }
-
-  btn.addEventListener('click', () => {
+  btn.addEventListener('click', async () => {
     state.musicPlaying = !state.musicPlaying;
+
     btn.classList.toggle('playing', state.musicPlaying);
     btn.querySelector('span').textContent = state.musicPlaying ? '🔊' : '🎵';
-    if (state.musicPlaying) playMelody();
-    else clearTimeout(state.melodyTimeout);
+
+    if (state.musicPlaying) {
+      try {
+        await audio.play();
+      } catch (error) {
+        state.musicPlaying = false;
+        btn.classList.remove('playing');
+        btn.querySelector('span').textContent = '🎵';
+      }
+    } else {
+      audio.pause();
+    }
   });
 }
 
