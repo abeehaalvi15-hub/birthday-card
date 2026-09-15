@@ -10,7 +10,7 @@ const CONFIG = {
 reasons: [
   "The way you make me laugh even when I'm annoyed at you.",
   "Your ridiculously cute smile.",
-  "The way you keep up with my wierdness.",
+  "The way you keep up with my weirdness.",
   "Because you annoy me.",
   "The way you get excited about the smallest things.",
   "Because you're my favourite person to annoy.",
@@ -33,7 +33,6 @@ reasons: [
     "Happy birthday, Tushi. ❤️"
 ],
 
-  ],
 balloonWishes: [
     "May you grow big musclessss 💪",
     "May you keep smiling, even on the annoying days 🌟",
