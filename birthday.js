@@ -4,48 +4,42 @@
 
 // ===== CONFIGURATION (THAY ĐỔI TẠI ĐÂY) =====
 const CONFIG = {
-  name: "vợ yêu",
-  signature: "— Của anh, với tất cả tình yêu 💛",
-  candleCount: 5,
-  reasons: [
-    "Nụ cười của em làm sáng cả căn phòng",
-    "Trái tim em nhân hậu và ấm áp",
-    "Cách em chăm sóc những người em yêu",
-    "Giọng cười giòn tan của em",
-    "Em luôn biết cách khiến anh cảm thấy bình yên",
-    "Sự dũng cảm em thể hiện mỗi ngày",
-    "Đôi mắt em sáng lên khi em hạnh phúc",
-    "Em vừa mạnh mẽ vừa dịu dàng",
-    "Những bữa sáng em nấu cho anh",
-    "Cách em hiểu anh — dù anh không nói",
-    "Sự kiên nhẫn em dành cho anh",
-    "Em làm mọi nơi trở thành nhà",
-    "Tinh thần lạc quan truyền cảm hứng cho anh",
-    "Cách em yêu thương một cách thầm lặng",
-    "Những khoảnh khắc bình thường bên em đều đặc biệt",
-    "Em là người bạn đời tuyệt vời nhất",
-    "Chỉ đơn giản là — em là em ✨"
+  name: "Tuseer",
+  signature: "— With all my love, Abeeha ❤️",
+  candleCount: 10,
+reasons: [
+  "The way you make me laugh even when I'm annoyed at you.",
+  "Your ridiculously cute smile.",
+  "The way you keep up with my wierdness.",
+  "Because you annoy me.",
+  "The way you get excited about the smallest things.",
+  "Because you're my favourite person to annoy.",
+  "The way you make me feel safe.",
+  "Because you put up with me. Somehow. 😂",
+  ...
   ],
-  letterLines: [
-    "Em yêu,",
-    "",
-    "Anh không giỏi nói lời hoa mỹ, nhưng mỗi chữ ở đây đều là thật.",
-    "",
-    "Mỗi ngày bên em, anh đều thầm cảm ơn. Cảm ơn vì nụ cười của em mỗi sáng. Cảm ơn vì sự kiên nhẫn em dành cho anh. Cảm ơn vì em đã biến mọi nơi thành nhà.",
-    "",
-    "Em là điều tuyệt vời nhất đã đến trong cuộc đời anh.",
-    "",
-    "Sinh nhật vui vẻ, người anh yêu nhất."
+ letterLines: [
+  "Hey you,",
+  "",
+  "Happy birthday to my favourite person.",
+  "",
+  "I don't think I say it enough, but I'm really grateful for you.",
+  "",
+  "Thank you for being there through all the good days, bad days, stupid arguments and everything in between.",
+  "",
+  "I hope this year brings you everything you've been wishing for.",
+  "",
+  "Happy birthday ❤️"
+
   ],
   balloonWishes: [
-    "Luôn xinh đẹp! 💕",
-    "Mãi hạnh phúc! 🌟",
-    "Sức khỏe dồi dào! 💪",
-    "Tràn đầy niềm vui! 🎉",
-    "Yêu thương bất tận! 💛",
-    "May mắn luôn đến! 🍀",
-    "Ước mơ thành thật! ✨",
-    "Mỗi ngày tuyệt vời! 🌸"
+    "May you grow big musclessss 💪",
+    "May you keep smiling 🌟",
+    "I wish you get a cute wife (me)💕",
+    "I wish for all happiness in the world for you🎉",
+    "I hope you become who you want to be💛",
+    "May you get all of your +100 dream cars 🍀",
+    "I wish that all your wishes comw true✨",
   ]
 };
 
