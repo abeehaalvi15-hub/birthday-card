@@ -34,15 +34,16 @@ reasons: [
 ],
 
   ],
-  balloonWishes: [
+balloonWishes: [
     "May you grow big musclessss 💪",
-    "May you keep smiling 🌟",
-    "I wish you get a cute wife (me)💕",
-    "I wish for all happiness in the world for you🎉",
-    "I hope you become who you want to be💛",
-    "May you get all of your +100 dream cars 🍀",
-    "I wish that all your wishes comw true✨",
-  ]
+    "May you keep smiling, even on the annoying days 🌟",
+    "May you get that cute wife you wished for (me, obviously) 💕",
+    "May you get all the happiness you deserve 🎉",
+    "May you become everything you want to be 💛",
+    "May you somehow get ALL your +100 dream cars 🚗",
+    "May all your little and BIG wishes come true ✨",
+    "And may I get to annoy you for many, many more birthdays ❤️"
+],
 };
 
 // ===== STATE =====
